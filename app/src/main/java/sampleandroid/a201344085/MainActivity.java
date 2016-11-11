@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     int count1 = 0;
     LinearLayout MyLayout1;
     RatingBar MyRatingBar1;
+    RadioButton rbtn1;
+    RadioButton rbtn2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         ck1 = (CheckBox)findViewById(R.id.checkBox);
         MyLayout1 = (LinearLayout)findViewById(R.id.activity_main);
         MyRatingBar1 = (RatingBar)findViewById(R.id.ratingBar);
+        rbtn1 = (RadioButton)findViewById(R.id.radioButton);
+        rbtn2 = (RadioButton)findViewById(R.id.radioButton2);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +58,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 Toast.makeText(getApplicationContext(), MyRatingBar1.getRating()+"점 입니다",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        rbtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rbtn1.isChecked()) Toast.makeText(getApplicationContext(), "남자입니다" ,Toast.LENGTH_SHORT).show();
+                else Toast.makeText(getApplicationContext(), "여자입니다",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        rbtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rbtn2.isChecked()) Toast.makeText(getApplicationContext(), "여자입니다" ,Toast.LENGTH_SHORT).show();
+                else Toast.makeText(getApplicationContext(), "남자입니다",Toast.LENGTH_SHORT).show();
             }
         });
     }
