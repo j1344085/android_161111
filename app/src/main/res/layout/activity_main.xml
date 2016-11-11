@@ -36,24 +36,25 @@
             android:text="남자"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton" />
+            android:id="@+id/radioButton"
+            android:layout_weight="0.48" />
 
         <RadioButton
             android:text="여자"
-            android:layout_width="88dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/radioButton2"
-            android:layout_weight="0.17" />
+            android:layout_weight="0.53" />
 
     </RadioGroup>
 
     <RatingBar
-        android:layout_width="303dp"
+        android:layout_width="276dp"
         android:layout_height="wrap_content"
         android:id="@+id/ratingBar"
         android:numStars="5"
         android:rating="0"
-        android:paddingLeft="60dp"
+        android:paddingLeft="30dp"
         android:isIndicator="false" />
 
     <CalendarView
