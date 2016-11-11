@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -9,10 +9,65 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="sampleandroid.a201344085.MainActivity">
+    <!--match_parent 부모에 맞춘다 즉 레이아웃에 맞춤-->
+    <!--wrap_content 내용물의 크기에 맞춘다-->
+    <Button
+        android:text="Hello"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button" />
+
+    <Button
+        android:orientation="horizontal"
+        android:text="Produce101 Love I.O.I"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
-</RelativeLayout>
+
+    <CheckBox
+        android:text="BgColor = HotPink"
+        android:layout_width="189dp"
+        android:layout_height="20dp"
+        android:id="@+id/checkBox" />
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="351dp"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:text="Pick Me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="벗꽃이 지면"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="같은곳에서"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton3"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendarView" />
+
+</LinearLayout>
